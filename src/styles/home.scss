@@ -1,0 +1,120 @@
+.home{
+    color: #ffffff;
+    background-color: $bgColor;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+
+    .web-gl{
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        top: 0;
+        
+
+        #vanta-net{
+            position: relative;
+            min-height: 100%;
+            top: -150px;
+            right: -250px;
+            z-index: 2;
+            opacity: 1;
+            transition: opacity .5s;
+        }
+    }
+
+    >div:first-of-type {
+        position: relative;
+    }
+    
+    $route-animation-speed: .5s;
+    .scroll-section {
+        &.home-route-enter {
+            position: absolute;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            
+            &.home-route-enter-active {
+                opacity: 1;
+                transition: opacity $route-animation-speed / 2;
+                transition-delay: $route-animation-speed / 2;
+            }
+        }
+        &.home-route-exit {
+            opacity: 1;
+
+            &.home-route-exit-active {
+                opacity: 0;
+                transition: opacity $route-animation-speed / 2;
+            }
+        }
+    }
+    .section-services {
+        $tile-animation-speed: ($route-animation-speed / 2) / 5;
+        &.home-route-enter {
+            .card-services {
+                opacity: 0;
+            }
+            &.home-route-enter-active {
+                .card-services {
+                    opacity: 1;
+                    transition: opacity $route-animation-speed / 2;
+                    &:nth-child(2) {
+                        transition-delay: $tile-animation-speed * 1;
+                    }
+                    &:nth-child(3) {
+                        transition-delay: $tile-animation-speed * 2;
+                    }
+                    &:nth-child(4) {
+                        transition-delay: $tile-animation-speed * 3;
+                    }
+                    &:nth-child(5) {
+                        transition-delay: $tile-animation-speed * 4;
+                    }
+                }
+            }
+        }
+        &.home-route-exit {
+            .card-services {
+                opacity: 1;
+            }
+            &.home-route-exit-active {
+                .card-services {
+                    opacity: 0;
+                    transition: opacity $route-animation-speed / 2;
+                    &:nth-child(2) {
+                        transition-delay: $tile-animation-speed * 1;
+                    }
+                    &:nth-child(3) {
+                        transition-delay: $tile-animation-speed * 2;
+                    }
+                    &:nth-child(4) {
+                        transition-delay: $tile-animation-speed * 3;
+                    }
+                    &:nth-child(5) {
+                        transition-delay: $tile-animation-speed * 4;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1160px){
+    .home {
+        .web-gl {
+            #vanta-net {
+                right: 0;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 768px){
+    .home {
+        .web-gl {
+            display: none;
+        }
+    }
+}

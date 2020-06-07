@@ -1,0 +1,84 @@
+* {
+    font-family: 'Proxima Nova';
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+    list-style: none;
+}
+
+.hide {
+    display: none ;
+}
+.show {
+    display: flex !important;
+}
+.scroll-hidden {
+    overflow: hidden;
+  }
+.scroll-x-hidden {
+    overflow-x: hidden !important; 
+}
+.add-opacity-zero {
+    opacity: 0 !important;
+    transition: opacity .25s !important;
+}
+.open-pop-up {
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    mix-blend-mode: inherit;
+}
+
+.render {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.transition-about-us {
+    transition: background-color 0.2s ease 0s;
+}
+
+.fixed-footer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    z-index: 99;
+    pointer-events: all;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    will-change: transform;
+    perspective: 1000;
+}
+
+.fade-up-ai {
+    transform: translateY(-200px);
+    opacity: 0;
+    transition: opacity .5s, transform .4s;
+}
+
+.opacity-swirl {
+    opacity: 0 !important;
+}
+
+.content-canvas {
+    opacity: 1;
+    transition: opacity .25s;
+    position: static !important;
+}
+
+.scene {
+    position: absolute;
+    transform: rotate(90deg) translateY(-25%) translateX(-80%); 
+    z-index: 1;
+    right: 50%;
+}
+
+@media only screen and (max-width: 800px) {
+    .scene {
+        transform: rotate(90deg) translateY(-13%) translateX(-80%); 
+    }
+}

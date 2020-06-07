@@ -1,0 +1,41 @@
+// variables //
+@import "variables";
+//          //
+
+// fonts //
+@import 'fonts';
+//       //
+
+// mixins //
+@import "mixins";
+//        //
+
+// themes-header  //
+@import 'themes-header';
+//                //
+
+// elements of page //
+@import "header";
+@import 'get-in-touch';
+@import 'burgerMenu';
+@import "footer";
+@import 'AI';
+@import "scroll-section";
+@import 'works';
+@import 'top-block-and-top-page';
+//                 //
+
+// pages // 
+@import "home";
+@import "neural";
+@import "services";
+@import 'experties';
+@import 'about-us';
+@import 'contacts';
+@import 'careers';
+@import 'vacancies';
+//       //
+
+// global //
+@import"global";
+//        //
